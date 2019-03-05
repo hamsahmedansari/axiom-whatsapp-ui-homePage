@@ -31,16 +31,19 @@
         <div class="item-1 ">
           <i class="material-icons">&#xe412;</i>
         </div>
-        <div class="item-1 active flex-grow-2">
+        <div
+          class="item-1 active flex-grow-2 chats-tab"
+          onclick="chatsClick();"
+        >
           <p>chats <span class="badge">2</span></p>
         </div>
-        <div class="item-1 flex-grow-2">
+        <div class="item-1 flex-grow-2 status-tab" onclick="statusClick();">
           <p>
             status
             <span class="notification"></span>
           </p>
         </div>
-        <div class="item-1 flex-grow-2">
+        <div class="item-1 flex-grow-2 calls-tab" onclick="callsClick();">
           <p>
             calls
           </p>
@@ -48,337 +51,692 @@
       </div>
     </header>
     <section>
-      <div
-        class="flex-container  flex-content-justify-space-around align-items-center flex-direction chats"
-      >
-        <div class="item-1 flex-grow-1">
-          <img src="./assets/images/abinandan.jpg" alt="" />
-        </div>
-        <div class="item-1  flex-grow-2 middle">
-          <h5>Abi Nanandan</h5>
-          <p>
-            ☕ is amazing sir..
-          </p>
-        </div>
-        <div class="item-1  flex-grow-1 text-center">
-          <span class="date">13:05 PM</span><br />
-          <span class="badge-green">1</span>
-        </div>
-      </div>
-      <div
-        class="flex-container  flex-content-justify-space-around align-items-center flex-direction chats"
-      >
-        <div class="item-1 flex-grow-1">
-          <img
-            src="./assets/images/48376863_2231207610242966_8706554370109472768_n.jpg"
-            alt=""
-          />
-        </div>
-        <div class="item-1  flex-grow-2 middle">
-          <h5>Aamir liaquat</h5>
-          <p>
-            kaisa diya...
-          </p>
-        </div>
-        <div class="item-1  flex-grow-1 text-center">
-          <span class="date">Yesterday</span><br />
-          <span class="badge-green">1</span>
-        </div>
-      </div>
-
-      <div
-        class="flex-container  flex-content-justify-space-around align-items-center flex-direction chats"
-      >
-        <div class="item-1 flex-grow-1">
-          <img src="./assets/images/modi.jpg" alt="" />
-        </div>
-        <div class="item-1  flex-grow-2 middle">
-          <h5>Modi</h5>
-          <p>
-            Sorry boss galti se fire ho gya tha...
-          </p>
-        </div>
-        <div class="item-1  flex-grow-1 text-center">
-          <span class="date grey">Yesterday</span><br />
-          <!-- <span class="badge-green">1</span> -->
-        </div>
-      </div>
-
-      <div
-        class="flex-container  flex-content-justify-space-around align-items-center flex-direction chats"
-      >
-        <div class="item-1 flex-grow-1">
-          <img src="./assets/images/abd.jpg" alt="" />
-        </div>
-        <div class="item-1  flex-grow-2 middle">
-          <h5>AB de Villiers</h5>
-          <p>
-            🍛 Biryani 💖💖💖
-          </p>
-        </div>
-        <div class="item-1  flex-grow-1 text-center">
-          <span class="date grey">Yesterday</span><br />
-          <!-- <span class="badge-green">1</span> -->
-        </div>
-      </div>
-
-      <div
-        class="flex-container  flex-content-justify-space-around align-items-center flex-direction chats"
-      >
-        <div class="item-1 flex-grow-1">
-          <img src="./assets/images/adnan.jpg" alt="" />
-        </div>
-        <div class="item-1  flex-grow-2 middle">
-          <h5>Major Adnan Sami</h5>
-          <div class="flex-container">
-            <img
-              src="assets/images/double-tick.png"
-              class="blue-tick "
-              alt=""
-            />
-            <p>Well done Major</p>
+      <div class="chats-page">
+        <div
+          class="flex-container  flex-content-justify-space-around align-items-center flex-direction chats"
+        >
+          <div class="item-1 flex-grow-1">
+            <img src="./assets/images/abinandan.jpg" alt="" />
+          </div>
+          <div class="item-1  flex-grow-2 middle">
+            <h5>Abi Nanandan</h5>
+            <p>
+              ☕ is amazing sir..
+            </p>
+          </div>
+          <div class="item-1  flex-grow-1 text-center">
+            <span class="date">13:05 PM</span><br />
+            <span class="badge-green">1</span>
           </div>
         </div>
-        <div class="item-1  flex-grow-1 text-center">
-          <span class="date grey">Yesterday</span><br />
-          <!-- <span class="badge-green">1</span> -->
-        </div>
-      </div>
-
-      <div
-        class="flex-container  flex-content-justify-space-around align-items-center flex-direction chats"
-      >
-        <div class="item-1 flex-grow-1">
-          <img src="./assets/images/lhore.jpg" alt="" />
-        </div>
-        <div class="item-1  flex-grow-2 middle">
-          <h5>lahore Qalandars</h5>
-          <div class="flex-container">
+        <div
+          class="flex-container  flex-content-justify-space-around align-items-center flex-direction chats"
+        >
+          <div class="item-1 flex-grow-1">
             <img
-              src="assets/images/double-tick.png"
-              class="blue-tick "
+              src="./assets/images/48376863_2231207610242966_8706554370109472768_n.jpg"
               alt=""
             />
-            <p>lakh di lanat tere muh te</p>
+          </div>
+          <div class="item-1  flex-grow-2 middle">
+            <h5>Aamir liaquat</h5>
+            <p>
+              kaisa diya...
+            </p>
+          </div>
+          <div class="item-1  flex-grow-1 text-center">
+            <span class="date">Yesterday</span><br />
+            <span class="badge-green">1</span>
           </div>
         </div>
-        <div class="item-1  flex-grow-1 text-center">
-          <span class="date grey">Yesterday</span><br />
-          <!-- <span class="badge-green">1</span> -->
-        </div>
-      </div>
 
-      <div
-        class="flex-container  flex-content-justify-space-around align-items-center flex-direction chats"
-      >
-        <div class="item-1 flex-grow-1">
-          <img src="./assets/images/zalmi.png" alt="" />
+        <div
+          class="flex-container  flex-content-justify-space-around align-items-center flex-direction chats"
+        >
+          <div class="item-1 flex-grow-1">
+            <img src="./assets/images/modi.jpg" alt="" />
+          </div>
+          <div class="item-1  flex-grow-2 middle">
+            <h5>Modi</h5>
+            <p>
+              Sorry boss galti se fire ho gya tha...
+            </p>
+          </div>
+          <div class="item-1  flex-grow-1 text-center">
+            <span class="date grey">Yesterday</span><br />
+            <!-- <span class="badge-green">1</span> -->
+          </div>
         </div>
-        <div class="item-1  flex-grow-2 middle">
-          <h5>Zalmi Qalandars</h5>
-          <div class="flex-container">
-            <!-- <img
+
+        <div
+          class="flex-container  flex-content-justify-space-around align-items-center flex-direction chats"
+        >
+          <div class="item-1 flex-grow-1">
+            <img src="./assets/images/abd.jpg" alt="" />
+          </div>
+          <div class="item-1  flex-grow-2 middle">
+            <h5>AB de Villiers</h5>
+            <p>
+              🍛 Biryani 💖💖💖
+            </p>
+          </div>
+          <div class="item-1  flex-grow-1 text-center">
+            <span class="date grey">Yesterday</span><br />
+            <!-- <span class="badge-green">1</span> -->
+          </div>
+        </div>
+
+        <div
+          class="flex-container  flex-content-justify-space-around align-items-center flex-direction chats"
+        >
+          <div class="item-1 flex-grow-1">
+            <img src="./assets/images/adnan.jpg" alt="" />
+          </div>
+          <div class="item-1  flex-grow-2 middle">
+            <h5>Major Adnan Sami</h5>
+            <div class="flex-container">
+              <img
+                src="assets/images/double-tick.png"
+                class="blue-tick "
+                alt=""
+              />
+              <p>Well done Major</p>
+            </div>
+          </div>
+          <div class="item-1  flex-grow-1 text-center">
+            <span class="date grey">Yesterday</span><br />
+            <!-- <span class="badge-green">1</span> -->
+          </div>
+        </div>
+
+        <div
+          class="flex-container  flex-content-justify-space-around align-items-center flex-direction chats"
+        >
+          <div class="item-1 flex-grow-1">
+            <img src="./assets/images/lhore.jpg" alt="" />
+          </div>
+          <div class="item-1  flex-grow-2 middle">
+            <h5>lahore Qalandars</h5>
+            <div class="flex-container">
+              <img
+                src="assets/images/double-tick.png"
+                class="blue-tick "
+                alt=""
+              />
+              <p>lakh di lanat tere muh te</p>
+            </div>
+          </div>
+          <div class="item-1  flex-grow-1 text-center">
+            <span class="date grey">Yesterday</span><br />
+            <!-- <span class="badge-green">1</span> -->
+          </div>
+        </div>
+
+        <div
+          class="flex-container  flex-content-justify-space-around align-items-center flex-direction chats"
+        >
+          <div class="item-1 flex-grow-1">
+            <img src="./assets/images/zalmi.png" alt="" />
+          </div>
+          <div class="item-1  flex-grow-2 middle">
+            <h5>Zalmi Qalandars</h5>
+            <div class="flex-container">
+              <!-- <img
                   src="assets/images/double-tick.png"
                   class="blue-tick "
                   alt=""
                 /> -->
-            <p>karachi jeete ga</p>
+              <p>karachi jeete ga</p>
+            </div>
+          </div>
+          <div class="item-1  flex-grow-1 text-center">
+            <span class="date">Yesterday</span><br />
+            <span class="badge-green">1</span>
           </div>
         </div>
-        <div class="item-1  flex-grow-1 text-center">
-          <span class="date">Yesterday</span><br />
-          <span class="badge-green">1</span>
-        </div>
-      </div>
 
-      <div
-        class="flex-container  flex-content-justify-space-around align-items-center flex-direction chats"
-      >
-        <div class="item-1 flex-grow-1">
-          <img src="./assets/images/waqar.jpg" alt="" />
+        <div
+          class="flex-container  flex-content-justify-space-around align-items-center flex-direction chats"
+        >
+          <div class="item-1 flex-grow-1">
+            <img src="./assets/images/waqar.jpg" alt="" />
+          </div>
+          <div class="item-1  flex-grow-2 middle">
+            <h5>Waqar Zaka</h5>
+            <div class="flex-container">
+              <img
+                src="assets/images/double-tick.png"
+                class="blue-tick "
+                alt=""
+              />
+              <p>trimmer 😂😂😂</p>
+            </div>
+          </div>
+          <div class="item-1  flex-grow-1 text-center">
+            <span class="date grey">Yesterday</span><br />
+            <!-- <span class="badge-green">1</span> -->
+          </div>
         </div>
-        <div class="item-1  flex-grow-2 middle">
-          <h5>Waqar Zaka</h5>
-          <div class="flex-container">
+        <div
+          class="flex-container  flex-content-justify-space-around align-items-center flex-direction chats"
+        >
+          <div class="item-1 flex-grow-1">
+            <img src="./assets/images/abinandan.jpg" alt="" />
+          </div>
+          <div class="item-1  flex-grow-2 middle">
+            <h5>Abi Nanandan</h5>
+            <p>
+              ☕ is amazing sir..
+            </p>
+          </div>
+          <div class="item-1  flex-grow-1 text-center">
+            <span class="date">13:05 PM</span><br />
+            <span class="badge-green">1</span>
+          </div>
+        </div>
+        <div
+          class="flex-container  flex-content-justify-space-around align-items-center flex-direction chats"
+        >
+          <div class="item-1 flex-grow-1">
             <img
-              src="assets/images/double-tick.png"
-              class="blue-tick "
+              src="./assets/images/48376863_2231207610242966_8706554370109472768_n.jpg"
               alt=""
             />
-            <p>trimmer 😂😂😂</p>
+          </div>
+          <div class="item-1  flex-grow-2 middle">
+            <h5>Aamir liaquat</h5>
+            <p>
+              kaisa diya...
+            </p>
+          </div>
+          <div class="item-1  flex-grow-1 text-center">
+            <span class="date">Yesterday</span><br />
+            <span class="badge-green">1</span>
           </div>
         </div>
-        <div class="item-1  flex-grow-1 text-center">
-          <span class="date grey">Yesterday</span><br />
-          <!-- <span class="badge-green">1</span> -->
-        </div>
-      </div>
-      <div
-        class="flex-container  flex-content-justify-space-around align-items-center flex-direction chats"
-      >
-        <div class="item-1 flex-grow-1">
-          <img src="./assets/images/abinandan.jpg" alt="" />
-        </div>
-        <div class="item-1  flex-grow-2 middle">
-          <h5>Abi Nanandan</h5>
-          <p>
-            ☕ is amazing sir..
-          </p>
-        </div>
-        <div class="item-1  flex-grow-1 text-center">
-          <span class="date">13:05 PM</span><br />
-          <span class="badge-green">1</span>
-        </div>
-      </div>
-      <div
-        class="flex-container  flex-content-justify-space-around align-items-center flex-direction chats"
-      >
-        <div class="item-1 flex-grow-1">
-          <img
-            src="./assets/images/48376863_2231207610242966_8706554370109472768_n.jpg"
-            alt=""
-          />
-        </div>
-        <div class="item-1  flex-grow-2 middle">
-          <h5>Aamir liaquat</h5>
-          <p>
-            kaisa diya...
-          </p>
-        </div>
-        <div class="item-1  flex-grow-1 text-center">
-          <span class="date">Yesterday</span><br />
-          <span class="badge-green">1</span>
-        </div>
-      </div>
 
-      <div
-        class="flex-container  flex-content-justify-space-around align-items-center flex-direction chats"
-      >
-        <div class="item-1 flex-grow-1">
-          <img src="./assets/images/modi.jpg" alt="" />
-        </div>
-        <div class="item-1  flex-grow-2 middle">
-          <h5>Modi</h5>
-          <p>
-            Sorry boss galti se fire ho gya tha...
-          </p>
-        </div>
-        <div class="item-1  flex-grow-1 text-center">
-          <span class="date grey">Yesterday</span><br />
-          <!-- <span class="badge-green">1</span> -->
-        </div>
-      </div>
-
-      <div
-        class="flex-container  flex-content-justify-space-around align-items-center flex-direction chats"
-      >
-        <div class="item-1 flex-grow-1">
-          <img src="./assets/images/abd.jpg" alt="" />
-        </div>
-        <div class="item-1  flex-grow-2 middle">
-          <h5>AB de Villiers</h5>
-          <p>
-            🍛 Biryani 💖💖💖
-          </p>
-        </div>
-        <div class="item-1  flex-grow-1 text-center">
-          <span class="date grey">Yesterday</span><br />
-          <!-- <span class="badge-green">1</span> -->
-        </div>
-      </div>
-
-      <div
-        class="flex-container  flex-content-justify-space-around align-items-center flex-direction chats"
-      >
-        <div class="item-1 flex-grow-1">
-          <img src="./assets/images/adnan.jpg" alt="" />
-        </div>
-        <div class="item-1  flex-grow-2 middle">
-          <h5>Major Adnan Sami</h5>
-          <div class="flex-container">
-            <img
-              src="assets/images/double-tick.png"
-              class="blue-tick "
-              alt=""
-            />
-            <p>Well done Major</p>
+        <div
+          class="flex-container  flex-content-justify-space-around align-items-center flex-direction chats"
+        >
+          <div class="item-1 flex-grow-1">
+            <img src="./assets/images/modi.jpg" alt="" />
+          </div>
+          <div class="item-1  flex-grow-2 middle">
+            <h5>Modi</h5>
+            <p>
+              Sorry boss galti se fire ho gya tha...
+            </p>
+          </div>
+          <div class="item-1  flex-grow-1 text-center">
+            <span class="date grey">Yesterday</span><br />
+            <!-- <span class="badge-green">1</span> -->
           </div>
         </div>
-        <div class="item-1  flex-grow-1 text-center">
-          <span class="date grey">Yesterday</span><br />
-          <!-- <span class="badge-green">1</span> -->
-        </div>
-      </div>
 
-      <div
-        class="flex-container  flex-content-justify-space-around align-items-center flex-direction chats"
-      >
-        <div class="item-1 flex-grow-1">
-          <img src="./assets/images/lhore.jpg" alt="" />
-        </div>
-        <div class="item-1  flex-grow-2 middle">
-          <h5>lahore Qalandars</h5>
-          <div class="flex-container">
-            <img
-              src="assets/images/double-tick.png"
-              class="blue-tick "
-              alt=""
-            />
-            <p>lakh di lanat tere muh te</p>
+        <div
+          class="flex-container  flex-content-justify-space-around align-items-center flex-direction chats"
+        >
+          <div class="item-1 flex-grow-1">
+            <img src="./assets/images/abd.jpg" alt="" />
+          </div>
+          <div class="item-1  flex-grow-2 middle">
+            <h5>AB de Villiers</h5>
+            <p>
+              🍛 Biryani 💖💖💖
+            </p>
+          </div>
+          <div class="item-1  flex-grow-1 text-center">
+            <span class="date grey">Yesterday</span><br />
+            <!-- <span class="badge-green">1</span> -->
           </div>
         </div>
-        <div class="item-1  flex-grow-1 text-center">
-          <span class="date grey">Yesterday</span><br />
-          <!-- <span class="badge-green">1</span> -->
-        </div>
-      </div>
 
-      <div
-        class="flex-container  flex-content-justify-space-around align-items-center flex-direction chats"
-      >
-        <div class="item-1 flex-grow-1">
-          <img src="./assets/images/zalmi.png" alt="" />
+        <div
+          class="flex-container  flex-content-justify-space-around align-items-center flex-direction chats"
+        >
+          <div class="item-1 flex-grow-1">
+            <img src="./assets/images/adnan.jpg" alt="" />
+          </div>
+          <div class="item-1  flex-grow-2 middle">
+            <h5>Major Adnan Sami</h5>
+            <div class="flex-container">
+              <img
+                src="assets/images/double-tick.png"
+                class="blue-tick "
+                alt=""
+              />
+              <p>Well done Major</p>
+            </div>
+          </div>
+          <div class="item-1  flex-grow-1 text-center">
+            <span class="date grey">Yesterday</span><br />
+            <!-- <span class="badge-green">1</span> -->
+          </div>
         </div>
-        <div class="item-1  flex-grow-2 middle">
-          <h5>Zalmi Qalandars</h5>
-          <div class="flex-container">
-            <!-- <img
+
+        <div
+          class="flex-container  flex-content-justify-space-around align-items-center flex-direction chats"
+        >
+          <div class="item-1 flex-grow-1">
+            <img src="./assets/images/lhore.jpg" alt="" />
+          </div>
+          <div class="item-1  flex-grow-2 middle">
+            <h5>lahore Qalandars</h5>
+            <div class="flex-container">
+              <img
+                src="assets/images/double-tick.png"
+                class="blue-tick "
+                alt=""
+              />
+              <p>lakh di lanat tere muh te</p>
+            </div>
+          </div>
+          <div class="item-1  flex-grow-1 text-center">
+            <span class="date grey">Yesterday</span><br />
+            <!-- <span class="badge-green">1</span> -->
+          </div>
+        </div>
+
+        <div
+          class="flex-container  flex-content-justify-space-around align-items-center flex-direction chats"
+        >
+          <div class="item-1 flex-grow-1">
+            <img src="./assets/images/zalmi.png" alt="" />
+          </div>
+          <div class="item-1  flex-grow-2 middle">
+            <h5>Zalmi Qalandars</h5>
+            <div class="flex-container">
+              <!-- <img
                 src="assets/images/double-tick.png"
                 class="blue-tick "
                 alt=""
               /> -->
-            <p>karachi jeete ga</p>
+              <p>karachi jeete ga</p>
+            </div>
+          </div>
+          <div class="item-1  flex-grow-1 text-center">
+            <span class="date">Yesterday</span><br />
+            <span class="badge-green">1</span>
           </div>
         </div>
-        <div class="item-1  flex-grow-1 text-center">
-          <span class="date">Yesterday</span><br />
-          <span class="badge-green">1</span>
+
+        <div
+          class="flex-container  flex-content-justify-space-around align-items-center flex-direction chats"
+        >
+          <div class="item-1 flex-grow-1">
+            <img src="./assets/images/waqar.jpg" alt="" />
+          </div>
+          <div class="item-1  flex-grow-2 middle">
+            <h5>Waqar Zaka</h5>
+            <div class="flex-container">
+              <img
+                src="assets/images/double-tick.png"
+                class="blue-tick "
+                alt=""
+              />
+              <p>Trimmer 😂😂😂</p>
+            </div>
+          </div>
+          <div class="item-1  flex-grow-1 text-center">
+            <span class="date grey">Yesterday</span><br />
+            <!-- <span class="badge-green">1</span> -->
+          </div>
+        </div>
+        <div class="float-btn">
+          <i class="material-icons">&#xe0c9;</i>
         </div>
       </div>
 
-      <div
-        class="flex-container  flex-content-justify-space-around align-items-center flex-direction chats"
-      >
-        <div class="item-1 flex-grow-1">
-          <img src="./assets/images/waqar.jpg" alt="" />
-        </div>
-        <div class="item-1  flex-grow-2 middle">
-          <h5>Waqar Zaka</h5>
-          <div class="flex-container">
-            <img
-              src="assets/images/double-tick.png"
-              class="blue-tick "
-              alt=""
-            />
-            <p>Trimmer 😂😂😂</p>
+      <div class="story-page d-none">
+        <div
+          class="flex-container  flex-content-justify-space-around align-items-center flex-direction chats"
+        >
+          <div class="item-1 flex-grow-1">
+            <img src="./assets/images/abinandan.jpg" alt="" />
+          </div>
+          <div class="item-1  flex-grow-2 middle">
+            <h5>Abi Nanandan</h5>
+            <p>
+              ☕ is amazing sir..
+            </p>
+          </div>
+          <div class="item-1  flex-grow-1 text-center">
+            <i
+              class="material-icons"
+              style="    transform: rotate(90deg);
+          color: #4cc75a;"
+              >&#xe5d4;</i
+            >
           </div>
         </div>
-        <div class="item-1  flex-grow-1 text-center">
-          <span class="date grey">Yesterday</span><br />
-          <!-- <span class="badge-green">1</span> -->
+        <div class="recentUpdate"><p>Recent Update</p></div>
+        <div
+          class="flex-container  flex-content-justify-space-around align-items-center flex-direction chats"
+        >
+          <div class="item-1 flex-grow-1">
+            <img
+              src="./assets/images/48376863_2231207610242966_8706554370109472768_n.jpg"
+              alt=""
+              class="border-dash-1"
+            />
+          </div>
+          <div class="item-1  flex-grow-2 middle">
+            <h5>Aamir liaquat</h5>
+            <p>
+              kaisa diya...
+            </p>
+          </div>
+          <div class="item-1  flex-grow-1 text-center opacity-0 ">
+            <span class="date opacity-0">Yesterday</span><br />
+            <span class="badge-green">1</span>
+          </div>
+        </div>
+
+        <div
+          class="flex-container  flex-content-justify-space-around align-items-center flex-direction chats"
+        >
+          <div class="item-1 flex-grow-1">
+            <img src="./assets/images/modi.jpg" alt="" />
+          </div>
+          <div class="item-1  flex-grow-2 middle">
+            <h5>Modi</h5>
+            <p>
+              Sorry boss galti se fire ho gya tha...
+            </p>
+          </div>
+          <div class="item-1  flex-grow-1 text-center opacity-0 ">
+            <span class="date opacity-0">Yesterday</span><br />
+            <span class="badge-green">1</span>
+          </div>
+        </div>
+
+        <div
+          class="flex-container  flex-content-justify-space-around align-items-center flex-direction chats"
+        >
+          <div class="item-1 flex-grow-1">
+            <img src="./assets/images/abd.jpg" alt="" />
+          </div>
+          <div class="item-1  flex-grow-2 middle">
+            <h5>AB de Villiers</h5>
+            <p>
+              🍛 Biryani 💖💖💖
+            </p>
+          </div>
+          <div class="item-1  flex-grow-1 text-center opacity-0 ">
+            <span class="date opacity-0">Yesterday</span><br />
+            <span class="badge-green">1</span>
+          </div>
+        </div>
+
+        <div class="float-btn">
+          <i class="material-icons">&#xe412;</i>
+        </div>
+      </div>
+
+      <div class="calls-page d-none">
+        <div
+          class="flex-container  flex-content-justify-space-around align-items-center flex-direction chats"
+        >
+          <div class="item-1 flex-grow-1">
+            <img src="./assets/images/abinandan.jpg" alt="" />
+          </div>
+          <div class="item-1  flex-grow-2 middle">
+            <h5>Abi Nanandan</h5>
+            <p>
+              <i class="material-icons"   style="
+              color: #4cc75a;
+              font-size: 12px;
+              transform: rotate(45deg);">&#xe5d8;</i> March 3, 3:13
+            </p>
+          </div>
+          <div class="item-1  flex-grow-1 text-center">
+                <i class="material-icons"   style="
+                color: #4cc75a;">&#xe551;</i>
+          </div>
+        </div>
+        <div
+          class="flex-container  flex-content-justify-space-around align-items-center flex-direction chats"
+        >
+          <div class="item-1 flex-grow-1">
+            <img
+              src="./assets/images/48376863_2231207610242966_8706554370109472768_n.jpg"
+              alt=""
+            />
+          </div>
+          <div class="item-1  flex-grow-2 middle">
+            <h5>Aamir liaquat</h5>
+            <p>
+                    <i class="material-icons"   style="
+                    color: #f96a6e;
+                    font-size: 12px;
+                    transform: rotate(-45deg);">&#xe5d8;</i> March 3, 3:13
+                  </p>
+                </div>
+                <div class="item-1  flex-grow-1 text-center">
+                      <i class="material-icons"   style="
+                      color: #4cc75a;">&#xe551;</i>
+                </div>
+        </div>
+
+        <div
+          class="flex-container  flex-content-justify-space-around align-items-center flex-direction chats"
+        >
+          <div class="item-1 flex-grow-1">
+            <img src="./assets/images/modi.jpg" alt="" />
+          </div>
+          <div class="item-1  flex-grow-2 middle">
+            <h5>Modi</h5>
+            <p>
+                    <i class="material-icons"   style="
+                    color: #f96a6e;
+                    font-size: 12px;
+                    transform: rotate(-45deg);">&#xe5d8;</i> March 3, 3:13
+                  </p>
+                </div>
+                <div class="item-1  flex-grow-1 text-center">
+                      <i class="material-icons"   style="
+                      color: #4cc75a;">&#xe551;</i>
+                </div>
+        </div>
+
+        <div
+          class="flex-container  flex-content-justify-space-around align-items-center flex-direction chats"
+        >
+          <div class="item-1 flex-grow-1">
+            <img src="./assets/images/abd.jpg" alt="" />
+          </div>
+          <div class="item-1  flex-grow-2 middle">
+            <h5>AB de Villiers</h5>
+            <p>
+                    <i class="material-icons"   style="
+                    color: #4cc75a;
+                    font-size: 12px;
+                    transform: rotate(45deg);">&#xe5d8;</i> March 3, 3:13
+                  </p>
+                </div>
+                <div class="item-1  flex-grow-1 text-center">
+                      <i class="material-icons"   style="
+                      color: #4cc75a;">&#xe551;</i>
+                </div>
+        </div>
+
+        <div
+          class="flex-container  flex-content-justify-space-around align-items-center flex-direction chats"
+        >
+          <div class="item-1 flex-grow-1">
+            <img src="./assets/images/adnan.jpg" alt="" />
+          </div>
+          <div class="item-1  flex-grow-2 middle">
+            <h5>Major Adnan Sami</h5>
+            <p>
+                    <i class="material-icons"   style="
+                    color: #4cc75a;
+                    font-size: 12px;
+                    transform: rotate(45deg);">&#xe5d8;</i> March 3, 3:13
+                  </p>
+                </div>
+                <div class="item-1  flex-grow-1 text-center">
+                      <i class="material-icons"   style="
+                      color: #4cc75a;">&#xe551;</i>
+                </div>
+        </div>
+
+        <div
+          class="flex-container  flex-content-justify-space-around align-items-center flex-direction chats"
+        >
+          <div class="item-1 flex-grow-1">
+            <img src="./assets/images/lhore.jpg" alt="" />
+          </div>
+          <div class="item-1  flex-grow-2 middle">
+            <h5>lahore Qalandars</h5>
+            <p>
+                    <i class="material-icons"   style="
+                    color: #4cc75a;
+                    font-size: 12px;
+                    transform: rotate(45deg);">&#xe5d8;</i> March 3, 3:13
+                  </p>
+                </div>
+                <div class="item-1  flex-grow-1 text-center">
+                      <i class="material-icons"   style="
+                      color: #4cc75a;">&#xe551;</i>
+                </div>
+        </div>
+
+       <div
+          class="flex-container  flex-content-justify-space-around align-items-center flex-direction chats"
+        >
+          <div class="item-1 flex-grow-1">
+            <img src="./assets/images/zalmi.png" alt="" />
+          </div>
+          <div class="item-1  flex-grow-2 middle">
+            <h5>Zalmi Qalandars</h5>
+            <p>
+                    <i class="material-icons"   style="
+                    color: #4cc75a;
+                    font-size: 12px;
+                    transform: rotate(45deg);">&#xe5d8;</i> March 3, 3:13
+                  </p>
+                </div>
+                <div class="item-1  flex-grow-1 text-center">
+                      <i class="material-icons"   style="
+                      color: #4cc75a;">&#xe551;</i>
+                </div>
+        </div>
+
+        <div
+          class="flex-container  flex-content-justify-space-around align-items-center flex-direction chats"
+        >
+          <div class="item-1 flex-grow-1">
+            <img src="./assets/images/waqar.jpg" alt="" />
+          </div>
+          <div class="item-1  flex-grow-2 middle">
+            <h5>Waqar Zaka</h5>
+            <p>
+                    <i class="material-icons"   style="
+                    color: #4cc75a;
+                    font-size: 12px;
+                    transform: rotate(45deg);">&#xe5d8;</i> March 3, 3:13
+                  </p>
+                </div>
+                <div class="item-1  flex-grow-1 text-center">
+                      <i class="material-icons"   style="
+                      color: #4cc75a;">&#xe551;</i>
+                </div>
+        </div>
+        <div
+          class="flex-container  flex-content-justify-space-around align-items-center flex-direction chats"
+        >
+          <div class="item-1 flex-grow-1">
+            <img src="./assets/images/abinandan.jpg" alt="" />
+          </div>
+          <div class="item-1  flex-grow-2 middle">
+            <h5>Abi Nanandan</h5>
+            <p>
+                    <i class="material-icons"   style="
+                    color: #f96a6e;
+                    font-size: 12px;
+                    transform: rotate(-45deg);">&#xe5d8;</i> March 3, 3:13
+                  </p>
+                </div>
+                <div class="item-1  flex-grow-1 text-center">
+                      <i class="material-icons"   style="
+                      color: #4cc75a;">&#xe551;</i>
+                </div>
+        </div>
+        <div
+          class="flex-container  flex-content-justify-space-around align-items-center flex-direction chats"
+        >
+          <div class="item-1 flex-grow-1">
+            <img
+              src="./assets/images/48376863_2231207610242966_8706554370109472768_n.jpg"
+              alt=""
+            />
+          </div>
+          <div class="item-1  flex-grow-2 middle">
+            <h5>Aamir liaquat</h5>
+            <p>
+                    <i class="material-icons"   style="
+                    color: #4cc75a;
+                    font-size: 12px;
+                    transform: rotate(45deg);">&#xe5d8;</i> March 3, 3:13
+                  </p>
+                </div>
+                <div class="item-1  flex-grow-1 text-center">
+                      <i class="material-icons"   style="
+                      color: #4cc75a;">&#xe551;</i>
+                </div>
+        </div>
+
+        <div
+          class="flex-container  flex-content-justify-space-around align-items-center flex-direction chats"
+        >
+          <div class="item-1 flex-grow-1">
+            <img src="./assets/images/modi.jpg" alt="" />
+          </div>
+          <div class="item-1  flex-grow-2 middle">
+            <h5>Modi</h5>
+            <p>
+                    <i class="material-icons"   style="
+                    color: #f96a6e;
+                    font-size: 12px;
+                    transform: rotate(-45deg);">&#xe5d8;</i> March 3, 3:13
+                  </p>
+                </div>
+                <div class="item-1  flex-grow-1 text-center">
+                      <i class="material-icons"   style="
+                      color: #4cc75a;">&#xe551;</i>
+                </div>
+        </div>
+
+        <div
+          class="flex-container  flex-content-justify-space-around align-items-center flex-direction chats"
+        >
+          <div class="item-1 flex-grow-1">
+            <img src="./assets/images/abd.jpg" alt="" />
+          </div>
+          <div class="item-1  flex-grow-2 middle">
+            <h5>AB de Villiers</h5>
+            <p>
+                    <i class="material-icons"   style="
+                    color: #f96a6e;
+                    font-size: 12px;
+                    transform: rotate(-45deg);">&#xe5d8;</i> March 3, 3:13
+                  </p>
+                </div>
+                <div class="item-1  flex-grow-1 text-center">
+                      <i class="material-icons"   style="
+                      color: #4cc75a;">&#xe551;</i>
+                </div>
+        </div>
+
+        
+
+        <div class="float-btn">
+          <i class="material-icons">&#xe0b0;</i>
         </div>
       </div>
     </section>
+
     <script src="./assets/js/main.js"></script>
   </body>
 </html>
